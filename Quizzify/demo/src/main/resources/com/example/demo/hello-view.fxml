@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane opacity="0.96" prefHeight="776.0" prefWidth="1153.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane layoutX="375.2" layoutY="80.0" prefHeight="675.0" prefWidth="1587.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+          <Button layoutX="656.0" layoutY="566.0" onAction="#onClickLogin" prefHeight="52.0" prefWidth="155.0" style="-fx-background-color: #58A4B0;" text="Login">
+            <font>
+               <Font name="System Bold" size="19.0" />
+            </font>
+            <effect>
+               <DropShadow height="32.7" radius="14.095" width="25.68">
+                  <color>
+                     <Color red="0.3450980484485626" green="0.6431372761726379" blue="0.6901960968971252" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </Button>
+          <Label layoutX="669.0" layoutY="78.0" prefHeight="51.0" prefWidth="119.0" text="Log In" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="35.0" />
+            </font>
+         </Label>
+         <AnchorPane layoutX="648.0" layoutY="145.0" prefHeight="6.0" prefWidth="155.0" style="-fx-background-color: #58A4B0;" />
+      
+                <TextField fx:id="username" layoutX="584.0" layoutY="227.0" prefHeight="52.0" prefWidth="298.0" promptText="Username">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+            <effect>
+               <DropShadow height="2.34" radius="2.425" width="9.36">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </TextField>
+          <PasswordField fx:id="password" layoutX="584.0" layoutY="333.0" prefHeight="52.0" prefWidth="298.0" promptText="Password" AnchorPane.topAnchor="333.0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+            <effect>
+               <DropShadow height="9.36" radius="5.335" width="13.98">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </PasswordField>
+         <Text fx:id="loginMessage" fill="RED" layoutX="345.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incorrect username or password" visible="false" wrappingWidth="388.53680419921875">
+            <font>
+               <Font name="System Bold" size="25.0" />
+            </font>
+         </Text>
+         <AnchorPane prefHeight="0.0" prefWidth="0.0" />
+         <AnchorPane layoutX="-1.6" prefHeight="736.0" prefWidth="341.0" style="-fx-background-color: #58A4B0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="785.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <AnchorPane layoutX="109.0" layoutY="156.0" prefHeight="6.0" prefWidth="110.0" style="-fx-background-color: black;" />
+               <Label layoutX="33.0" layoutY="236.0" prefHeight="36.0" prefWidth="262.0" text="Welcome to Quizzify !">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </Label>
+               <Label layoutX="47.0" layoutY="342.0" prefHeight="34.0" prefWidth="246.0" text="Login to have your ">
+                  <font>
+                     <Font name="System Bold" size="24.0" />
+                  </font>
+               </Label>
+               <Label layoutX="26.0" layoutY="384.0" prefHeight="34.0" prefWidth="288.0" text="personalised experience !">
+                  <font>
+                     <Font name="System Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label layoutX="60.0" layoutY="84.0" prefHeight="58.0" prefWidth="220.0" text=" Quizzify" textAlignment="CENTER">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="49.0" />
+                  </font>
+               </Label>
+               <Button layoutX="106.0" layoutY="571.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="128.0" text="Know more">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Button>
+            </children>
+         </AnchorPane>
+         <MenuButton fx:id="usertype" layoutX="584.0" layoutY="443.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="298.0" text="Select usertype">
+           <items>
+               <MenuItem mnemonicParsing="false" onAction="#setCreator" text="Quiz Creator" />
+               <MenuItem mnemonicParsing="false" onAction="#setTaker" text="Quiz Attendee" />
+           </items>
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+            <effect>
+               <DropShadow height="11.64" radius="5.905" width="13.98">
+                  <color>
+                     <Color red="0.9789473414421082" green="0.9608187079429626" blue="0.9608187079429626" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </MenuButton>
+      </children>
+      <effect>
+         <DropShadow height="98.51" radius="38.1525" spread="0.15" width="56.1" />
+      </effect>
+
+         </AnchorPane>
+</AnchorPane>
